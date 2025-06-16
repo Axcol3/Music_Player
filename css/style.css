@@ -1,0 +1,515 @@
+@font-face {
+    font-family: 'Kenia';
+    src: url('../assets/fonts/Kenia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    list-style: none;
+    text-decoration: none !important;
+}
+
+body {
+    margin: 0 auto;
+    height: 100%;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+
+}
+
+.page-header {
+    max-width: 100%;
+    width: 100%;
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-left: 7rem;
+    margin-bottom: 4%;
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.logo {
+    width: 60px;
+    height: 80px;
+}
+
+.navigation-link {
+   
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: aliceblue;
+    transition: transform 0s ease-in-out, color 0s;
+
+}
+
+.navigation-link:hover {
+    display: inline-block;
+    transform: scale(1.05);
+    color: rgb(255, 60, 0);
+}
+
+.intro-container {
+    display: flex;
+    position: relative;
+}
+
+.intro-inner-content {
+    justify-content: left;
+    margin-inline: 10%;
+    margin-top: 5%;
+
+}
+
+.intro-object {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 23%;
+    height: 750px;
+    background: gcd(0, 0, 0, 100);
+    border-radius: 40px;
+    margin-inline: 15%;
+    border: 20px solid rgb(150, 140, 140);
+
+}
+
+.phone-background {
+    position: absolute;
+    top: -5px;
+    right: 23%;
+    width: 55%;
+    height: 5%;
+    background-color: rgb(150, 140, 140);
+    border-radius: 10px;
+    z-index: 3;
+
+}
+
+.intro {
+    display: flex;
+}
+
+.intro-title {
+    font-size: clamp(40px, 8vw, 120px);
+    line-height: clamp(44px, 8vw, 125px);
+    text-transform: uppercase;
+    font-family: 'Kenia', sans-serif;
+    margin-bottom: clamp(10px, 5vw, 100px);
+}
+
+.waves {
+    margin-top: 10%;
+    margin-inline: 20%;
+    display: flex;
+    gap: 20px;
+}
+
+.wave:nth-child(1) {
+
+    animation: waveGo1 1.02s infinite;
+}
+
+.wave:nth-child(2) {
+
+    animation: waveGo2 5s infinite;
+}
+
+.wave:nth-child(3) {
+
+    animation: waveGo1 2.05s infinite;
+}
+
+.wave:nth-child(4) {
+
+    animation: waveGo2 1s infinite;
+}
+
+.wave {
+    width: 20px;
+    height: 90px;
+    background-color: rgb(118, 118, 118);
+    border-radius: 100px;
+}
+
+@keyframes waveGo1 {
+
+    0%,
+    100% {
+        height: 140px;
+    }
+
+    50% {
+        height: 90px;
+    }
+}
+
+@keyframes waveGo2 {
+
+    0%,
+    100% {
+        height: 120px;
+    }
+
+    50% {
+        height: 85px;
+    }
+}
+
+.intro-image {
+    position: absolute;
+    top: 190px;
+    right: 15%;
+    width: 250px;
+    height: 250px;
+    border: 5px solid rgba(251, 255, 254, 0.3);
+    border-radius: 200px;
+    z-index: 3;
+    animation: imageBit 0.3s ease-in-out infinite, imageBit2 0.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes imageBit {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes imageBit2 {
+    0% {
+        transform: scale(1.06);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+.intro-object::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(130deg, #1585bd98 30%, rgba(234, 32, 5, 0.552) 100%);
+    animation: fadeInOut 4s ease-in-out infinite;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Второй градиент */
+.intro-object::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(130deg, rgba(234, 32, 5, 0.552) 30%, #1585bd98 100%);
+    animation: fadeInOut 6s ease-in-out infinite;
+    animation-delay: 1s;
+    /* смещаем анимацию на половину цикла */
+    z-index: 2;
+    border-radius: 20px;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.soundtrack {
+    position: absolute;
+    width: 250px;
+    height: 4px;
+    border-radius: 200px;
+    background: linear-gradient(90deg, rgb(107, 107, 107), rgb(206, 206, 206));
+    z-index: 3;
+    top: 470px;
+    left: 50px;
+    animation: moveGradient 4s ease-in-out infinite;
+}
+
+.soundtrack-button {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 200px;
+    background-color: rgb(219, 218, 218);
+    z-index: 4;
+    top: 467px;
+    left: 50px;
+    animation: soundGo 20s ease-in-out infinite;
+
+}
+
+@keyframes soundGo {
+    0% {
+        left: 50px;
+    }
+
+    100% {
+        left: 300px;
+    }
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0;
+    top: 500px;
+    right: 140px;
+    z-index: 3;
+
+}
+
+.play-button:focus {
+    outline: none;
+}
+
+.page-main {
+    display: block;
+    padding-top: 8%;
+}
+
+.music-section {
+    display: block;
+
+}
+
+.main-title {
+    margin-inline: 10%;
+    font-weight: 700;
+    font-size: 45px;
+
+    margin-bottom: 8%;
+}
+
+.music-container {
+    display: flex;
+    justify-content: center;
+}
+
+.music-list {
+    margin-inline: 9%;
+    margin-top: 10%;
+}
+
+.music-button {
+    justify-items: center;
+    font-size: 30px;
+    padding: 10px;
+    width: 400px;
+    margin-bottom: 40%;
+    background-color: rgb(255, 60, 0);
+    color: aliceblue;
+    border-radius: 50px;
+    transition: transform 0s ease-in-out, background-color 0s ease-in-out, color 0s ease-in-out;
+}
+
+.music-button:hover {
+    transform: scale(1.05);
+    background-color: rgb(156, 41, 6);
+    color: rgb(171, 173, 175);
+}
+
+.about-section {
+    display: block;
+    background: linear-gradient(180deg, black, rgb(233, 93, 42), black);
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.about-text {
+    margin-top: 23%;
+    padding-inline: 10%;
+    margin-inline: 10%;
+    font-size: 220%;
+}
+
+.store-section {
+    display: block;
+    height: 900px;
+}
+
+.store-container {
+    display: flex;
+}
+
+.store-inner-content {
+    margin-top: 8%;
+    display: block;
+    margin-left: 8%;
+    width: 400px;
+
+
+}
+
+.store-button {
+    font-size: 30px;
+    width: 450px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    color:  rgb(255, 255, 255);
+    background-color: rgb(255, 60, 0);
+    transition: transform 0s ease-in-out;
+}
+.store-button:hover{
+    background-color:  rgb(255, 255, 255);
+    color: rgb(255, 60, 0);
+    transform: scale(1.05);
+}
+
+.store-text {
+    font-size: 20px;
+    text-align: center;
+    flex: wrap;
+    margin-top: 5%;
+
+}
+
+.store-subtitle {
+    flex: wrap;
+    margin-top: 10%;
+    margin-left: 9%;
+    text-align: center;
+}
+.store-link{
+    font-size: 17px;
+    line-height: 22px;
+    color:  rgb(247, 78, 26);
+    font-weight: 700;
+    transition: transform 0s ease-in-out;
+}
+.store-link:hover{
+    color: rgb(182, 53, 13);
+    transform: scale(1.05);
+
+}
+.store-object {
+    position: relative;
+    margin-left: 13%;
+    margin-right: 10%;
+    width: 80%;
+    height: 500px;
+    border: 30px solid rgb(108, 108, 108);
+    background-color: rgb(31, 31, 31);
+    border-radius: 20px;
+    z-index: 1;
+}
+.laptop-floor{
+    position:absolute;
+    top: 457px;
+    right: -70px;
+    width: 120%;
+    height: 50px;
+   
+    border-radius: 15px;
+    background-color: rgb(108, 108, 108);
+    z-index:2;
+}
+.laptop-title{
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+.laptop-display{
+    position: absolute;
+   
+    z-index:2;
+}
+.display-menu{
+    position: absolute;
+    left:10px;
+    top: 80px;
+    z-index:2;
+   
+}
+.search{
+    border-radius: 20px;
+    width: 90px;
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.menu-list{
+    position: absolute;
+    z-index:2;
+}
+.display-button{
+    border-radius:5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 90px;
+    height: 20px;
+    border-radius: 100px;
+    font-size: 13px;
+}
+.line:nth-child(1){
+    position:absolute;
+    top: 70px;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(113, 115, 117);
+    z-index:2;
+}
+.line:nth-child(2){
+    position:absolute;
+    left: 110px;
+    height: 100%;
+    width: 1px;
+    background-color: rgb(113, 115, 117);
+    z-index:2;
+}
