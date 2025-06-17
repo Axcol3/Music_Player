@@ -54,15 +54,13 @@
                 </ul>
             </div>
             <div class="intro-object">
-                <div class="phone-background"></div>
-                <div class="phone-display"></div>
-                <img src="images/music.png" class="intro-image">
-                <div class="soundtrack"></div>
-                <div class="soundtrack-button"></div>
-                <button class="play-button">
-                    <img src="images/playbutton.png" width="90px" height="90px">
-
-                </button>
+                <div class="phone-background" aria-hidden="true"></div>
+                <div class="phone-display">
+                    <img src="images/music.png" class="intro-image">
+                    <div class="soundtrack"></div>
+                    <div class="soundtrack-button"></div>
+                    <button class="play-button" aria-label="Play"></button>
+                </div>
             </div>
         </div>
 
@@ -121,38 +119,143 @@
                         </a>
 
                 </div>
-                <div class="store-object">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <div class="laptop-display">
-                        <h5 class="laptop-title">Music<br> Player</h5>
 
-                        <div class="display-menu">
-                            <input name="search" placeholder="Поиск" class="search">
-                            <ul class="display-list">
-                                <li>
-                                    <button class="display-button">Для Вас</button>
-                                </li>
-                                <li>
-                                    <button class="display-button">Песни</button>
-                                </li>
-                                <li>
-                                    <button class="display-button">Артисты</button>
-                                </li>
-                                <li>
-                                    <button class="display-button">Альбомы</button>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="store-object">
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+
+                    <h5 class="laptop-title">Music<br> Player</h5>
+
+                    <div class="display-menu">
+                        <input name="search" placeholder="Поиск" class="search">
+                        <ul class="display-list">
+                            <li>
+                                <button class="display-button">Для Вас</button>
+                            </li>
+                            <li>
+                                <button class="display-button">Песни</button>
+                            </li>
+                            <li>
+                                <button class="display-button">Артисты</button>
+                            </li>
+                            <li>
+                                <button class="display-button">Альбомы</button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="laptop-floor"></div>
+                    <div class="display-header">
+                        <div class="soundtrack--display-header"></div>
+                        <div class="soundtrack-button--display-header"></div>
+                        <img src="images/music.png" width="55px" height="55px" class="image--display-header">
+                        <p class="title--display-header">Your Music - Artist</p>
+                    </div>
+                    <div class="display-main">
+                        <button class="button--display-main" type="button">Топ 10</button>
+                        <button class="button--display-main" type="button">Найти</button>
+
+                        <ul class="list--display-main">
+                            <li class="item--display-main">
+                                <img src="images/1.png" class="image--display-main">
+                                <a class="title--display-main">СПБЧ</a>
+                                <a class="author--display-main">Здесь и всегда</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/2.png" class="image--display-main">
+                                <a class="title--display-main">Sufjan Stevens</a>
+                                <a class="author--display-main">Carrie & Lowell</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/3.png" class="image--display-main">
+                                <a class="title--display-main">Hudson Mohawke</a>
+                                <a class="author--display-main">Lantern</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/4.png" class="image--display-main">
+                                <a class="title--display-main">Pinkshinyultrablast</a>
+                                <a class="author--display-main">Everything Else Matters</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/5.png" class="image--display-main">
+                                <a class="title--display-main">Floating Points</a>
+                                <a class="author--display-main">Elaenia</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/6.png" class="image--display-main">
+                                <a class="title--display-main">Shamir</a>
+                                <a class="author--display-main">Ratchet</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/7.png" class="image--display-main">
+                                <a class="title--display-main">Grimes</a>
+                                <a class="author--display-main">Art Angels</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/8.png" class="image--display-main">
+                                <a class="title--display-main">Tame Impala</a>
+                                <a class="author--display-main">Currents</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/9.png" class="image--display-main">
+                                <a class="title--display-main">Jamie xx</a>
+                                <a class="author--display-main">In Colour</a>
+                            </li>
+                            <li class="item--display-main">
+                                <img src="images/10.png" class="image--display-main">
+                                <a class="title--display-main">Kendrick Lamar</a>
+                                <a class="author--display-main">To Pimp A Butterfly</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="display-footer">
+                        <ul class="menu--display-footer">
+                            <li>
+                                <button type="button" class="button--display-footer">
+                                    <img src="images/Menu.png">
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="button--display-footer">
+                                    <img src="images/Internet Antenna.png">
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="button--display-footer">
+                                    <img src="images/Adjust.png">
+                                </button>
+                            </li>
+                        </ul>
+                        <ul class="musicbuttonlist--display-footer">
+                            <li>
+                                <button type="button" class="backbutton--display-footer">
+                                    <img src="images/backbutton.png"  width="20px" height="20px">
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="playbutton--display-footer">
+                                    
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="forwardbutton--display-footer">
+                                    <img src="images/forwardbutton.png"  width="20px" height="20px">
+                                </button>
+                            </li>
+                        </ul>
+                        <span class="volume"></span>
+                        <span class="volume-button"></span>
+                        <span class="volume-settup"></span>
+                    </div>
+                    <div class="laptop-floor" aria-hidden="true"></div>
                 </div>
+
             </div>
         </section>
     </main>
     <footer class="page-footer">
         <div class="service">
-            <h1 class="service-title">Music Player</h1>
+            <h1 class="service-title">Music <br>Player</h1>
             <ul class="service-store">
                 <li>
                     <h4 class="service-subtitle">MPlayer Store</h4>
